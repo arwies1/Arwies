@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARWIES ADAMDIR</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk9rvqpqXnv4-kRmLrt1XfC2UKufENR4um3w&s" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        .page {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .page.active {
+            display: flex;
+        }
+
+        .page1 {
+            background-image: url('https://4kwallpapers.com/images/wallpapers/john-wick-chapter-4-3840x2160-10664.jpg');
+        }
+
+        .page2 {
+            background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/10947.jpg');
+        }
+
+        .page3 {
+            background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/9483.jpg');
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            padding: 0 20px;
+        }
+
+        .left-section, .right-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1em; /* Küçültülen font boyutu */
+        }
+
+        .text-container {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .text-container h1 {
+            font-size: 2.5em; /* Küçültülen font boyutu */
+            margin: 0;
+            animation: text-animation 3s ease infinite;
+        }
+
+        .text-container p {
+            font-size: 1em; /* Küçültülen font boyutu */
+            margin: 10px 0 0;
+        }
+
+        .bio-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            text-align: left;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .bio-container h1 {
+            margin-bottom: 10px;
+        }
+
+        .bio-container p {
+            margin: 10px 0;
+            font-size: 1em;
+        }
+
+        .nav-buttons {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-buttons button {
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+
+        @keyframes text-animation {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .text-container h1 {
+                font-size: 2em; /* Küçültülen font boyutu */
+            }
+
+            .text-container p {
+                font-size: 1em; /* Küçültülen font boyutu */
+            }
+
+            .left-section, .right-section {
+                font-size: 1em; /* Küçültülen font boyutu */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-container h1 {
+                font-size: 1.5em; /* Küçültülen font boyutu */
+            }
+
+            .text-container p {
+                font-size: 0.9em; /* Küçültülen font boyutu */
+            }
+
+            .left-section, .right-section {
+                font-size: 0.9em; /* Küçültülen font boyutu */
+            }
+        }
+
+        /* Additional styles for specific changes */
+        .page3 .text-container {
+            font-size: 1em; /* Aynı boyutta olacak şekilde ayarlandı */
+            text-align: center;
+        }
+
+        .page3 .left-section, .page3 .right-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px; /* Logolar ile yazılar arasındaki boşluk */
+            font-size: 1em; /* Aynı boyutta olacak şekilde ayarlandı */
+        }
+
+        .page3 .text-container i, .page3 .right-section i {
+            font-size: 2em; /* Aynı boyutta olacak şekilde ayarlandı */
+        }
+
+        .page3 .text-container span, .page3 .right-section span {
+            font-size: 0.8em; /* Aynı boyutta olacak şekilde ayarlandı */
+        }
+
+        .footer-text {
+            font-size: 1.2em; /* Footer yazısı büyüklüğü */
+            position: absolute;
+            bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page page1 active">
+        <div class="container">
+            <div class="left-section">
+                <i class="fab fa-discord"></i>
+                <span>arwies</span>
+            </div>
+            <div class="text-container">
+                <h1>ARWIES ADAMDIR</h1>
+                <p>Bu Adam Kral Baba Pro Sigma</p>
+            </div>
+            <div class="right-section">
+                <i class="fab fa-instagram"></i>
+                <span>ctarwies</span>
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <button onclick="navigateToPage(1)">Anasayfa</button>
+            <button onclick="navigateToPage(2)">Hakkımda</button>
+            <button onclick="navigateToPage(3)">İletişim</button>
+        </div>
+        <div class="footer-text">Bu site Arwies tarafından yapılmıştır</div>
+    </div>
+
+    <div class="page page2">
+        <div class="bio-container">
+            <h1>Arwies Biyografisi</h1>
+            <h2>Başlangıç ve Erken Dönem:</h2>
+            <p>Arwies, Cr4ck serüvenine 2020 yılında başladı. Bu yolculukta birçok kişiyle vakit geçirdi, eğlendi, sohbet etti ve zaman zaman küstü. Üç yıl boyunca kendini bu alanda eğitti ve geliştirdi. Pek çok Discord ödül sunucusunda yetkili oldu.</p>
+            <h2>Gelişim ve CrackTurkey:</h2>
+            <p>2023 yılında CrackTurkey sitesini keşfetti ve burada da kendini geliştirmeye devam etti. Sitede yeni dostlar edindi ve yine bu süreçte kendini daha da ileriye taşıdı. 2024 yılının Mart ayında CrackTurkey'de yetkili oldu. Üç ay boyunca hizmet verdi ve en son paylaşım ekibindeyken belirli sebeplerden dolayı ayrıldı.</p>
+            <h2>Günümüz:</h2>
+            <p>Şu an kendi yoluna bakıyor; istediğinde geliyor, istediğinde çıkıyor. Kendisi mutlu ve huzurlu bir şekilde hayatın tadını çıkarıyor.</p>
+        </div>
+        <div class="nav-buttons">
+            <button onclick="navigateToPage(1)">Anasayfa</button>
+            <button onclick="navigateToPage(2)">Hakkımda</button>
+            <button onclick="navigateToPage(3)">İletişim</button>
+        </div>
+    </div>
+
+    <div class="page page3">
+        <div class="container">
+            <div class="text-container">
+                <h1>İletişim</h1>
+                <div class="left-section">
+                    <i class="fab fa-discord"></i>
+                    <span>arwies</span>
+                </div>
+                <div class="right-section">
+                    <i class="fab fa-instagram"></i>
+                    <span>ctarwies</span>
+                </div>
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <button onclick="navigateToPage(1)">Anasayfa</button>
+            <button onclick="navigateToPage(2)">Hakkımda</button>
+            <button onclick="navigateToPage(3)">İletişim</button>
+        </div>
+    </div>
+
+    <script>
+        function navigateToPage(pageNumber) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Show the selected page
+            document.querySelector('.page' + pageNumber).classList.add('active');
+        }
+    </script>
+</body>
+</html>
